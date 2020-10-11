@@ -46,6 +46,10 @@ function loadPage(page) {
       var content = document.querySelector("#body-content");
       if (this.status == 200) {
         content.innerHTML = xhttp.responseText;
+
+        if(page === "potensi"){
+          showSlides(slideIndex);
+        }
       } else if (this.status == 404) {
         content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
       } else {
@@ -55,4 +59,19 @@ function loadPage(page) {
   };
   xhttp.open("GET", "pages/" + page + ".html", true);
   xhttp.send();
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
 }

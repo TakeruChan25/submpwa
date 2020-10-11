@@ -19,8 +19,8 @@ var urlsToCache = [
   "assets/jpr.jpg",
   "assets/jprlandscape.jpg",
   "assets/pasiir6.jpg",
-  "assets/apple-icon.jpg",
-  "assets/aj.jpg",
+  "assets/apple-icon.png",
+  "assets/aj.JPG",
   "assets/night.png",
   "assets/jmbtn.jpeg"
 
